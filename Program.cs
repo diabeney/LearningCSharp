@@ -23,10 +23,35 @@ namespace TestHello
                 string hello = sayHello(surname, username);
                 return (hello, age);
             }
-            Console.WriteLine(returnMultipleValues("Diabene", "yawaddo", 30));            
+            Console.WriteLine(returnMultipleValues("Diabene", "yawaddo", 30));
+        
+
+            int i = 0;
+
+            while (i < 10) {
+                Console.WriteLine(i);
+                i++;
+            }
+
+            string day = "friday";
+
+            switch (day) {
+                case "monday":
+                    Console.WriteLine("the best");
+                    break;
+                case "tuesday":
+                case "wednesday":
+                Console.WriteLine("Beauty of fall through!");
+                break;
+                default:
+                Console.WriteLine("not important");
+                break;
+            }
+     
         }
 
-        
+
+
     }
 }
 
