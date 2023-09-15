@@ -47,6 +47,33 @@ namespace TestHello
                 Console.WriteLine("not important");
                 break;
             }
+
+            bool catchErrors = true;
+
+            try {
+                char novalid = 'c';
+                Console.WriteLine(novalid);
+            } catch (Exception Ex) when (catchErrors == true) {
+                Console.WriteLine(Ex.Message);
+            }
+
+            int number = int.MaxValue;
+
+            checked {
+                int err = number;
+                Console.WriteLine(err);
+            }
+
+            int calculateForce(int mass, int acceletation) {
+                if (acceletation == 0) {
+                    throw new Exception("acceletation should not be zero");
+                }
+
+                return mass * acceletation;
+            }
+
+            int force = calculateForce(number, 2);
+            Console.WriteLine(force);
      
         }
 
