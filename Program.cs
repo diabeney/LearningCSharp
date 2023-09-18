@@ -1,4 +1,6 @@
-﻿
+﻿using CircleModel;
+using static System.Math;
+
 namespace TestHello
 {
     class Program 
@@ -73,11 +75,44 @@ namespace TestHello
             }
 
             int force = calculateForce(number, 2);
-            Console.WriteLine(force);
-     
+            // Console.WriteLine(force);
+
+            Circle c, e;
+            c = new Circle();
+            e = new Circle(24);
+            Console.WriteLine(Circle.numOfCircles);
+            double rootOfNumber = Sqrt(c.Area());
+            Console.WriteLine(rootOfNumber);
+
+            int? myValue = 23;
+
+            if (!myValue.HasValue) {
+                myValue = 45;
+                Console.WriteLine(myValue);
+            } else {
+                Console.WriteLine(myValue.Value);
+            }
+
+            void increase(ref int arg) {
+                arg++;
+            }
+
+            void display() {
+                int referenceType = 3;
+                increase(ref referenceType);
+                Console.WriteLine(referenceType);
+            }
+
+            display();
+
+            int j = 24;
+            object o = j;
+            j = (int)o; //cast
+
+            string verbatimStr = @"C:\Windows";
+            Console.WriteLine(verbatimStr);
+
         }
-
-
 
     }
 }
