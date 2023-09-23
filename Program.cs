@@ -1,6 +1,6 @@
 ﻿using CircleModel;
 using static System.Math;
-
+using Structures;
 namespace TestHello
 {
     class Program 
@@ -112,6 +112,17 @@ namespace TestHello
             string verbatimStr = @"C:\Windows";
             Console.WriteLine(verbatimStr);
 
+            Time time = new Time(16, 36, 48);
+            Time newTime = new Time(j, i, force);
+
+            Time[] times = new Time[2]{time, newTime};
+            Console.WriteLine(time.Hours());
+
+            Console.WriteLine(times.Contains(time));
+
+            foreach (Time time1 in times) {
+                Console.WriteLine(time1.Hours());
+            }
         }
 
     }
