@@ -1,7 +1,10 @@
 ﻿using CircleModel;
 using static System.Math;
 using Structures;
+using Inheritance;
+
 namespace TestHello
+
 {
     class Program 
     {
@@ -74,6 +77,7 @@ namespace TestHello
                 return mass * acceletation;
             }
 
+
             int force = calculateForce(number, 2);
             // Console.WriteLine(force);
 
@@ -123,6 +127,10 @@ namespace TestHello
             foreach (Time time1 in times) {
                 Console.WriteLine(time1.Hours());
             }
+
+            Horse Afrikaan = new(sayHello("Thug", "Thugger"));
+            Console.WriteLine(Afrikaan.ModeOfMovement());
+            Console.WriteLine(Afrikaan.isColdBlooded());
         }
 
     }
