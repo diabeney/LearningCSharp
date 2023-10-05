@@ -100,7 +100,7 @@ namespace TestHello
             void increase(ref int arg) {
                 arg++;
             }
-
+            
             void display() {
                 int referenceType = 3;
                 increase(ref referenceType);
@@ -116,13 +116,13 @@ namespace TestHello
             string verbatimStr = @"C:\Windows";
             Console.WriteLine(verbatimStr);
 
-            Time time = new Time(16, 36, 48);
-            Time newTime = new Time(j, i, force);
+            Time time = new(16, 36, 48);
+            Time newTime = new(j, i, force);
 
             Time[] times = new Time[2]{time, newTime};
             Console.WriteLine(time.Hours());
 
-            Console.WriteLine(times.Contains(time));
+            Console.WriteLine(times);
 
             foreach (Time time1 in times) {
                 Console.WriteLine(time1.Hours());
